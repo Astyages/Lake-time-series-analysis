@@ -52,7 +52,7 @@ function(data, n, alphabet_size) {
         # Before normalizing, check for variability in subsquence. If none, normalization will 
         # return NaN when dividing by 0, sd(data).
         if(var(data) == 0){
-                data = rep.int(0, length(d))
+                data = rep.int(0, length(data))
         } else {
         # Z normalize it, as it is meaningless to compare ts with different offsets and amplitudes
                 data = (data - mean(data)) / sd(data)  
